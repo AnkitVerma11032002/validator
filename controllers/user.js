@@ -85,7 +85,7 @@ async function handleResetPassword(req, res) {
     // Send OTP via SMS using Infobip API
     try {
         const response = await axios.post('https://api.infobip.com/sms/1/text/single', {
-            from: 'YourSenderID',
+            from: '+917470524782',
             to: formattedNumber,
             text: `Your OTP for password reset is: ${otp}`
         }, {
