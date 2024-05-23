@@ -95,7 +95,7 @@ async function handleResetPassword(req, res) {
             }
         });
         if (response.status === 200) {
-            res.status(200).json({ message: `OTP sent successfully and your otp is ${otp}` });
+            res.status(200).json({ message: `OTP sent successfully and your otp is ${otp},${formattedNumber}` });
         } else {
             console.error('Error sending OTP:', response.data);
             res.status(500).json({ error: 'Failed to send OTP' });
